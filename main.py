@@ -13,27 +13,41 @@ def main():
     import random
 
     # Getting password length
-    length = int(input("Enter password length: "))
 
-    while (length < 1 or length < 7):
-        print('length must be greater than zero (0) and minimum seven (7) digits for security reasons ')
-        length = int(input("Enter password length: "))
+
+    # Continue with the rest of your code
 
     characterList = ""
 
 
     # Getting character set for password
-    while(True):
+    while True:
+
+        while True:
+            try:
+                length = int(input("Enter password length: "))
+                if length < 1 or length < 7:
+                    print("Length must be greater than zero (0) and minimum seven (7) digits for security reasons.")
+                else:
+                    break
+            except ValueError:
+                print("Invalid input. Please enter a valid number.")
 
         showMenu()
         print('\n')
-        while (length < 1):
-            print('length must be greater than zero (0)')
-            length = int(input("Enter password length: "))
+
+        while True:
+            try:
+                choice = int(input("Enter a number (1-5): "))
+                if 1 <= choice <= 5:
+
+                    break
+                else:
+                    print("Invalid input. Please enter a number from 1 to 5.")
+            except ValueError:
+                print("Invalid input. Please enter a number.")
 
 
-
-        choice = int(input("Make a selection (1-4): "))
         if (choice == 1):
             # Adding digits to possible characters
             characterList += string.digits

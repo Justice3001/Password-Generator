@@ -13,6 +13,7 @@ def main():
     import string
     import random
 
+    #empty string that will hold password values
     characterList = ""
 
 
@@ -196,7 +197,7 @@ def main():
 
         #exit/end program selection
         elif (choice == 5):
-            print('okay bye!\n')
+            print('Okay bye. Thanks for using program!\n')
             exit()
 
 

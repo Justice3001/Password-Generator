@@ -13,8 +13,6 @@ def main():
     import string
     import random
 
-
-
     characterList = ""
 
 
